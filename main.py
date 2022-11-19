@@ -16,15 +16,12 @@ class Student:
         ret += f'Заверешенные курсы: {", ".join(self.finished_courses)}\n'
         return ret
 
-
-
-
-
-
-
-
-
-
+    def average_grades(self):
+        """Average of all grades"""
+        for course, grades in self.grades.items():
+            self.average_grades_by_course.append(round(mean(grades), 2))
+            # self.average_grades_by_course.append(round(sum(grades) / len(grades), 2))
+        return round(mean(self.average_grades_by_course), 2)
 
 
 
